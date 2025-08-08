@@ -31,7 +31,7 @@ export const WeatherApp = () => {
 
     return (
         <div className="container"> 
-            <h1>Aplicacion de Clima</h1>
+            <h1>PRONOSTICO CLIMATICO</h1>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -42,7 +42,7 @@ export const WeatherApp = () => {
                 <button type="submit">Buscar</button>
             </form>
             {weatherData && (
-                <div>
+                <div className='data'>
                     <h2>{weatherData.name}, {weatherData.sys.country}</h2>
                     <p>La temperatura actual es {Math.floor(weatherData.main.temp - difKelvin)}ºC </p>
                     <p>La condicion meteorologica actual: {weatherData.weather[0].description} </p>
